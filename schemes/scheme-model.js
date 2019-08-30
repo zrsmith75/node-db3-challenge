@@ -43,8 +43,8 @@ function update({ scheme_name }, id) {
 }
 
 function remove(id) {
-  const delScheme = findById(id)
-    // const =  db('schemes')
+  const delScheme = findById(id);
+  return db("schemes")
     .where({ id })
     .del();
 }
